@@ -1,7 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
 
 // Замените на ваш токен
-const TOKEN = "YOUR_BOT_TOKEN";
+const TOKEN = "8009114347:AAELiLE6bLtwnJ0kVNsVXJtpXjuCgTqrj6k";
 
 // Создаем бота с использованием токена
 const bot = new TelegramBot(TOKEN, { polling: true });
@@ -34,7 +34,7 @@ bot.on("message", async (msg) => {
           eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
         bot.sendMessage(
           chatId,
-          `Случайный участник для обзора: @${randomUser.user.username}`
+          `Случайный участник для review: @${randomUser.user.username}`
         );
       } else {
         bot.sendMessage(chatId, "Нет доступных участников для выбора.");
